@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TP</title>
+</head>
+<body>
+    <div id="chrono"></div>
+    <style>
+        #chrono{
+            text-align: center;
+            width: 900px;
+            margin: 150px;
+            font-size: 150px;
+        }
+    </style>
+   <script language="JavaScript">
+       setInterval(chrono,1000);
+        let chronoDiv= document.getElementById('chrono');
+    let hrs = 0;
+    let min = 0;
+    let sec = 0;
+    function chrono(){
+        sec=sec+1;
+        if(sec==60)
+        {
+              if(min==59)
+                {
+                     if(hrs==23)
+                         {
+                             hrs=0;
+                             min=0;
+                             sec=0;
+                         }
+                     else
+                         {
+                             hrs=hrs+1;
+                             min=0;
+                             sec=0;
+                         }
+                }
+                else
+                {
+                    min=min+1;
+                    sec=0;
+                }
+            }
+            chronoDiv.textContent= hrs+":"+min+":"+sec;
+        }
+    </script>    
+</body>
+</html>

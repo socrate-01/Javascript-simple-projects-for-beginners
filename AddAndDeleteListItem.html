@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <ul id="reponse">
+    </ul>
+<input type="text" size="10px" id="truc">
+ <button class="ajout">addLi</button>
+ <button class="supprimer">delLi</button>
+
+<script>
+    function f(){
+       let ul = document.getElementById("reponse");
+       let truc = document.getElementById("truc");
+       let li = document.createElement("li");
+       li.setAttribute('id',truc.value);
+       li.appendChild(document.createTextNode(truc.value));
+       ul.appendChild(li);
+    }
+    let mybutton=document.querySelector(".ajout");
+    mybutton.addEventListener("click",f,false);
+    
+    function s(){
+    let ul = document.getElementById("reponse");
+    let truc = document.getElementById("truc");
+    let sup = document.getElementById(truc.value);
+    ul.removeChild(sup);
+    }
+    let myButton = document.querySelector(".supprimer");
+    myButton.addEventListener("click",s,false);
+</script>
+
+    </body>
+</html>

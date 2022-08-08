@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXO-3-3</title>
+    <script>
+        function pgcdF() { // Algorithme d'Euclide  
+            var first = document.querySelector('#first');
+            var second = document.querySelector('#second');
+            var pgcd = document.querySelector('#pgcd');
+            var a = parseInt(first.value);
+            var b = parseInt(second.value);
+            while (b>0) {   
+                var r=a%b;  
+                a=b;  
+                b=r;  
+            }   
+            pgcd.value =  a;  
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <fieldset>
+          <legend>P G D C</legend>
+          <label for="first">Premier chiffre&nbsp</label>
+          <input type="text" id="first" name="first"><br><br>
+          <label for="second">Second chiffre &nbsp</label>
+          <input type="text" id="second" name="second"><br><br><br>
+          <label for="pgcd">PGCD&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+          <input type="text" id="pgcd" name="pgcd"><br>
+          <button type="button" onclick="pgcdF()">Enregistrer</button>
+        </fieldset>
+      </form>
+</body>
+</html>

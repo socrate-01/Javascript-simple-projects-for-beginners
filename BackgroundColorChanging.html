@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXO3-4</title>
+    <script>
+        function changeColor(){
+            var color = document.querySelector('#color');
+            document.body.style.backgroundColor = color.value;
+        }
+    </script>
+</head>
+<body>
+    <label for="color">Veuiller choisir une couleur:</label>
+
+<select name="color" id="color" onchange="changeColor()">
+    <option value="">--Couleurs--</option>
+    <option value="red">Rouge</option>
+    <option value="blue">Bleu</option>
+    <option value="yellow">Jaune</option>
+    <option value="green">Vert</option>
+</select>
+
+</body>
+</html>

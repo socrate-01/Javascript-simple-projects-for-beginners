@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TP</title>
+</head>
+<body>
+    <div id="chrono"></div>
+    <style>
+        #chrono{
+            text-align: center;
+            width: 900px;
+            margin: 150px;
+            font-size: 150px;
+            color:blue;
+        }
+    </style>
+   <script language="JavaScript">
+       setInterval(chrono,1000);
+        let chronoDiv= document.getElementById('chrono');
+    let nombre = 0;
+    function chrono(){
+        nombre=nombre+1;
+        {
+            chronoDiv.textContent= nombre;
+        }
+    }
+    </script>    
+</body>
+</html>

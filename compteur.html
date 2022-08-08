@@ -1,0 +1,25 @@
+<!Doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Compteur</title>
+        </head>
+        <body>
+            <div id="input_div">
+                <input type="text" size="25" value="1" id="count">
+                <input type="button" value="-" id="moins" onclick="minus()">
+                <input type="button" value="+" id="plus" onclick="plus()">
+            </div>
+        <script>
+            var count=0;
+    var countEl = document.getElementById("count");
+    function plus(){
+        count++;
+        countEl.value = count;
+    }
+    function minus(){
+        count--;
+        countEl.value = count;
+    }
+</script>
+    </html>
